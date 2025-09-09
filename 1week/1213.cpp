@@ -8,7 +8,7 @@ int main(){
     cin.tie(NULL);cout.tie(NULL);
     cin >> s;
     // 펠린드롬 알고리즘
-    // 알파벳 해당 아스키 부분 카운팅
+    // 알파벳 해당 아스키 값 카운팅
     for(char a : s)cnt[a]++;
     // 아스키 숫자 높은것부터 채우기 (오름차순 출력이므로)
     for(int i = 'Z'; i >= 'A'; i--){
@@ -21,7 +21,8 @@ int main(){
             }
             // 홀수가 2개 => 안되는 경우
             if(flag == 2)break;
-            // ret 앞뒤로 문자붙이기
+            // ret 앞뒤로 문자붙이기 (딱 짝수번 붙임)
+            // 일단 CCC라면 -> CC만 붙임 나머지 C는 for문 밖에서 붙임
             // BBCCC 라면 -> ret=CCC 인상황에서 B(ret)B 붙이기
             // 앞, 뒤로 문자를 붙였으니 2개 빠지고 j는 2개씩 증가
             for(int j = 0; j < cnt[i]; j += 2){
