@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int t, n, m, k, sy, sx, ny, nx;
-int visited[54][54], a[54][54];
+int visited[51][51], a[51][51];
 int dy[] = {-1, 0, 1, 0};
 int dx[] = {0, 1, 0, -1};
 
@@ -19,12 +19,11 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
     cin >> t;
     for(int i = 0; i < t; i++){
+        // 매 테케마다 배열 초기화
+        fill(&a[0][0], &a[0][0] + 51 * 51, 0);
+        fill(&visited[0][0], &visited[0][0] + 51 * 51, 0);
         int ret = 0;
         cin >> n >> m >> k;
-        // 매번 배열 초기화
-        memset(a, 0, sizeof(a));
-        memset(visited, 0, sizeof(visited));
-
         for(int j = 0; j < k; j++){
             cin >> sy >> sx;
             a[sy][sx] = 1;
