@@ -12,11 +12,10 @@ string quard(int y, int x, int size){
     // 시작 값 (이후 값 비교를 위함)
     char b = a[y][x];
     string ret = "";
-    bool flag = 0;
     // 현재 위치에서 size 영역 범위만큼 탐색
     for(int i = y; i < y + size; i++){
         for(int j = x; j < x + size; j++){
-            // return case 2 : size 영역 중 일부가 다른 경우 
+            // return case 2 : size 영역 탐색 중 일부가 다른 경우 
             if(b != a[i][j]){
                 ret += '(';
                 // z자로 4분할 탐색 
