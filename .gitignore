@@ -1,1 +1,10 @@
 *.exe
+.vscode/launch.json
+.vscode/tasks.json
+1week/.vscode/settings.json
+2week/.vscode/c_cpp_properties.json
+2week/.vscode/launch.json
+2week/.vscode/settings.json
+2week/.vscode/tasks.json
+1week/2309.exe
+1week/2309.exe
